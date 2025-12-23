@@ -1,0 +1,1 @@
+(()=>{"use strict";const e=window.wp.blocks,r=JSON.parse('{"UU":"my-plugin/record-title"}');(0,e.registerBlockType)(r.UU,{edit:({context:e})=>"(Block Editor - my-plugin/record-title) The record ID: "+e["my-plugin/recordId"],save:()=>null})})();

@@ -1,0 +1,1 @@
+var o={d:(e,r)=>{for(var t in r)o.o(r,t)&&!o.o(e,t)&&Object.defineProperty(e,t,{enumerable:!0,get:r[t]})},o:(o,e)=>Object.prototype.hasOwnProperty.call(o,e)},e={};o.d(e,{Q:()=>r,R:()=>t});const r="Hello World from tools.js",t=(o,e="#FFF",r="#222")=>{console.log(`%c ${o} `,`background: ${r}; color: ${e}`)};var l=e.R,a=e.Q;export{l as log,a as text};

@@ -1,0 +1,1 @@
+(()=>{"use strict";const e=window.wp.blocks,i=window.wp.i18n,o=window.wp.blockEditor,t=window.ReactJSXRuntime,r=JSON.parse('{"UU":"create-block/script-modules-view"}');(0,e.registerBlockType)(r.UU,{edit:function(){return(0,t.jsx)("p",{...(0,o.useBlockProps)(),children:(0,i.__)("Script Modules View – hello from the editor!","script-modules-view")})}})})();

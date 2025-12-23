@@ -1,0 +1,54 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"landingPage": "/wp-admin/post.php?post=10&action=edit",
+	"preferredVersions": {
+		"php": "8.1",
+		"wp": "6.8"
+	},
+	"login": true,
+	"steps": [
+		{
+			"step": "resetData"
+		},
+		{
+			"step": "defineWpConfigConsts",
+			"consts": {
+				"USE_PLAYGROUND_CORS_PROXY": true
+			}
+		},
+		{
+			"step": "installPlugin",
+			"options": {
+				"activate": true,
+				"targetFolderName": "remote-data-blocks"
+			},
+			"pluginData": {
+				"caption": "Installing Remote Data Blocks",
+				"resource": "url",
+				"url": "https://github-proxy.com/proxy/?repo=Automattic/remote-data-blocks&release=latest&asset=remote-data-blocks.zip"
+			}
+		},
+		{
+			"step": "installPlugin",
+			"pluginData": {
+				"resource": "git:directory",
+				"url": "https://github.com/Automattic/wpvip-learn-enterprise-block-editor",
+				"ref": "HEAD",
+				"path": "examples/remote-data-blocks-custom-query"
+			},
+			"options": {
+				"activate": true
+			}
+		},
+		{
+			"step": "importWxr",
+			"file": {
+				"resource": "url",
+				"url": "https://raw.githubusercontent.com/Automattic/wpvip-learn-enterprise-block-editor/trunk/examples/remote-data-blocks-custom-query/_playground/export.xml"
+			}
+		}
+	],
+	"features": {
+		"networking": true
+	}
+}

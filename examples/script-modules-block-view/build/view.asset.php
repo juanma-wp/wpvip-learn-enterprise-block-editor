@@ -1,0 +1,1 @@
+<?php return array('dependencies' => array('@wordpress/interactivity', 'module-1', array('id' => '@lodash/startCase', 'import' => 'dynamic'), array('id' => 'fetchPosts', 'import' => 'dynamic'), array('id' => 'module-2', 'import' => 'dynamic'), array('id' => 'module-3', 'import' => 'dynamic')), 'version' => 'e8470550e9ca7c92c93d', 'type' => 'module');
